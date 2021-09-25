@@ -25,6 +25,7 @@ This repo contains in-development code for future releases.
 ***********
 
 - Rename `env` to `.env` and tailor for your app.
+- Go to the directory where you have `composer.json` and run the following command: `composer install`.
 - Change `JWT_SECRET_KEY` & `JWT_TIME_TO_LIVE` according to your need.
 - Change `app.baseURL` in .env
 - Change DB credentials accordingly in .env
@@ -41,11 +42,15 @@ This repo contains in-development code for future releases.
 
 > [!WARNING]
 > `JWT_SECRET_KEY` must be changed for your own protection in production environment.
+
+> [!TIP]
+> Either way, running `install` when a `composer.lock` file is present resolves and installs all dependencies that you listed in `composer.json`, but Composer uses the exact versions listed in `composer.lock` to ensure that the package versions are consistent for everyone working on your project.
+
 ***********************
 **Postman Calls & Methods**
 ***********************
 
-#### Register & Login
+### Register & Login
 
 POST : [http://localhost/api_jwt_ci4/public/register](http://localhost/api_jwt_ci4/public/register)
 
